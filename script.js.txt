@@ -1,0 +1,68 @@
+const messages = {
+  Maria: `Dear Maria 💗
+
+You are such a beautiful soul!
+
+I hope your life is always full of happiness,
+beautiful memories, laughter and love.
+
+Never forget how special you are.
+Keep smiling and shining! 🎀
+
+Thank you for being YOU!`,
+
+  Rim: `Dear Rim 🌸
+
+This little gift is just to remind you
+how amazing and special you are!
+
+May all your dreams come true.
+May your smile never disappear.
+
+You deserve the sweetest things in life!
+
+Sending you the biggest hug! 💕`
+};
+
+function openLetter(name) {
+  const letter = document.getElementById("letter");
+
+  document.getElementById("greeting").textContent =
+    "Dear " + name + " 💌";
+
+  document.getElementById("message").textContent =
+    messages[name];
+
+  letter.style.display = "block";
+
+  letter.scrollIntoView({
+    behavior: "smooth",
+    block: "nearest"
+  });
+
+  for (let i = 0; i < 25; i++) {
+    setTimeout(createFlower, i * 100);
+  }
+}
+
+function createFlower() {
+  const flowers = ["🌸", "💗", "🌷", "💕", "✨"];
+
+  const flower = document.createElement("div");
+
+  flower.className = "falling";
+
+  flower.textContent =
+    flowers[Math.floor(Math.random() * flowers.length)];
+
+  flower.style.left = Math.random() * 100 + "vw";
+
+  flower.style.fontSize =
+    (15 + Math.random() * 20) + "px";
+
+  document.body.appendChild(flower);
+
+  setTimeout(() => {
+    flower.remove();
+  }, 4000);
+}

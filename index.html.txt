@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Box of Love 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="container">
+
+    <div class="flowers">🌷 🌸 🎀 🌸 🌷</div>
+
+    <h1>A Little Box of Love</h1>
+
+    <p class="subtitle">
+      A little surprise for two special girls 💕
+    </p>
+
+    <div class="heart">💗</div>
+
+    <h2>Choose your name!</h2>
+
+    <div class="buttons">
+      <button onclick="openLetter('Maria')">
+        For Maria 🎀
+      </button>
+
+      <button onclick="openLetter('Rim')">
+        For Rim 🌷
+      </button>
+    </div>
+
+    <section class="letter" id="letter">
+      <h2 id="greeting"></h2>
+
+      <p id="message"></p>
+
+      <div class="decoration">💗 🌸 💗</div>
+
+      <p class="ending">
+        You deserve all the happiness in the world!
+      </p>
+
+      <p>With lots of love 💌</p>
+    </section>
+
+    <p class="footer">
+      Made with love ♡
+    </p>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

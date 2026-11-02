@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, serif;
+  background: linear-gradient(
+    135deg,
+    #ffe0ec,
+    #f5dfff,
+    #fff3f7
+  );
+  color: #b05283;
+  text-align: center;
+  padding: 25px 12px;
+}
+
+.container {
+  max-width: 520px;
+  margin: 35px auto;
+  padding: 35px 22px;
+  background: rgba(255,255,255,0.85);
+  border: 2px solid white;
+  border-radius: 30px;
+  box-shadow: 0 10px 35px #d98bb555;
+}
+
+.flowers {
+  font-size: 28px;
+}
+
+h1 {
+  color: #df6e9e;
+  font-size: 30px;
+}
+
+.subtitle {
+  color: #ae7a9c;
+  line-height: 1.7;
+}
+
+.heart {
+  font-size: 100px;
+  margin: 20px;
+  animation: heartbeat 1s infinite;
+  filter: drop-shadow(0 5px 12px #f49abe);
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+button {
+  background: #ed9fc1;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #d96d9e;
+  transform: translateY(-4px);
+}
+
+.letter {
+  display: none;
+  background: #fff0f6;
+  border: 2px dashed #ed9fc1;
+  border-radius: 22px;
+  padding: 22px;
+  margin-top: 25px;
+  line-height: 1.9;
+  animation: appear 0.7s ease;
+}
+
+.letter p {
+  white-space: pre-line;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.decoration {
+  font-size: 30px;
+}
+
+.ending {
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: 30px;
+  color: #c58aa8;
+  font-size: 13px;
+}
+
+.falling {
+  position: fixed;
+  top: -30px;
+  pointer-events: none;
+  animation: fall 4s linear forwards;
+  z-index: 10;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
